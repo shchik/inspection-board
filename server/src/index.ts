@@ -1,14 +1,18 @@
 import cookieParser from 'cookie-parser'
 import 'dotenv/config.js'
 import express from 'express'
-import router from './auth/auth.controller.js'
+import authRouter from './auth/auth.controller.js'
+import facultyRouter from './faculty/faculty.controller.js'
+import specialityRouter from './speciality/speciality.controller.js'
 const app = express()
 
 const port = process.env.PORT || 5000
 
 app.use(express.json())
-app.use(cookieParser(process.env.MY_SECRET || 'cookie_secret'))
+app.use(cookieParser(process.env.COOKIE_SECRET))
 
-app.use('/api/auth', router)
+app.use('/api/auth', authRouter)
+app.use('/api/faculty', facultyRouter)
+app.use('/api/speciality', specialityRouter)
 
 app.listen(port, () => console.log(`app is working on port ${port}!`))

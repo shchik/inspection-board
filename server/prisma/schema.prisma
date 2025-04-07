@@ -30,6 +30,7 @@ model Subject {
 model Faculty {
   id Int @default(autoincrement()) @id
   name String @unique
+  fullName String @unique @map("full_name")
 
   specialities Speciality[]
 
@@ -38,7 +39,8 @@ model Faculty {
 
 model Speciality {
   id Int @default(autoincrement()) @id
-  name String @unique
+  name String
+  fullName String @map("full_name")
   recruitmentPlan Int @map("recruitment_plan")
 
   faculty Faculty @relation(fields: [facultyId], references: [id])

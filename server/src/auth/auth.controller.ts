@@ -20,10 +20,13 @@ router.post('/login', async (req: Request, res: Response) => {
 		res.status(403).json({ message: 'Wrong password!' })
 		return
 	}
-
-	const access_token = jwt.sign({ id: userData.id }, process.env.MY_SECRET!, {
-		expiresIn: '1h',
-	})
+	const access_token = jwt.sign(
+		{ id: userData.id },
+		process.env.TOKEN_SECRET! || 'no secret',
+		{
+			expiresIn: '1h',
+		}
+	)
 
 	res.cookie('access_token', access_token, {
 		httpOnly: true,
@@ -49,7 +52,7 @@ router.post('/register', async (req: Request, res: Response) => {
 		password: hashedPassword,
 	})
 
-	const access_token = jwt.sign({ id: user.id }, process.env.MY_SECRET!, {
+	const access_token = jwt.sign({ id: user.id }, process.env.TOKEN_SECRET!, {
 		expiresIn: '1h',
 	})
 
