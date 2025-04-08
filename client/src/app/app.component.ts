@@ -1,22 +1,15 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './components/header/header.component';
-import { HomeComponent } from './pages/home/home.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, HomeComponent],
+  imports: [RouterOutlet],
   template: `
-    <app-header />
-    <app-home />
+    <main>
+      <router-outlet />
+    </main>
   `,
-  styles: [
-    `
-      div {
-        color: blue;
-      }
-    `,
-  ],
+  styles: [],
 })
 export class AppComponent {
   title = 'client';

@@ -1,7 +1,17 @@
-header {
+.header {
   width: 100%;
   background-color: lightblue;
   padding: 1rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__container {
+    img {
+      width: 6rem;
+      border-radius: 50%;
+    }
+  }
 
   nav {
     a {
