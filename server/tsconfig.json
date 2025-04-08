@@ -11,6 +11,6 @@
 		"rootDir": "./src",
 		"baseUrl": "./"
 	},
-	"include": ["src/**/*"],
+	"include": ["src/**/*", "express.d.ts"],
 	"exclude": ["node_modules"]
 }

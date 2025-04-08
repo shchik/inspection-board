@@ -22,7 +22,7 @@ router.post('/login', async (req: Request, res: Response) => {
 	}
 	const access_token = jwt.sign(
 		{ id: userData.id },
-		process.env.TOKEN_SECRET! || 'no secret',
+		process.env.TOKEN_SECRET!,
 		{
 			expiresIn: '1h',
 		}

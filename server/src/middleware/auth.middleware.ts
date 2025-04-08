@@ -14,7 +14,10 @@ export const authMiddleware = (
 	}
 
 	try {
-		const user = jwt.verify(accessToken, process.env.TOKEN_SECRET!)
+		const decoded = jwt.verify(accessToken, process.env.TOKEN_SECRET!)
+		if (typeof decoded === 'string') throw new Error()
+		const user = Object.assign({}, decoded)
+		res.locals.user = user
 		next()
 	} catch (err) {
 		res.clearCookie('access_token')
