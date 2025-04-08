@@ -2,6 +2,7 @@ import * as argon from 'argon2'
 import 'dotenv/config.js'
 import { Request, Response, Router } from 'express'
 import jwt from 'jsonwebtoken'
+import { createUserDto } from './auth.dto.js'
 import { AuthService } from './auth.service.js'
 
 const router = Router()
@@ -39,6 +40,12 @@ router.post('/login', async (req: Request, res: Response) => {
 })
 
 router.post('/register', async (req: Request, res: Response) => {
+	const validation = await createUserDto.safeParseAsync(req.body)
+	if (!validation.success) {
+		res.status(403).json(validation.error.errors[0].message)
+		return
+	}
+
 	const userData = await authService.findByEmail(req.body.email)
 
 	if (userData)

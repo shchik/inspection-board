@@ -38,6 +38,14 @@ router.post('/create', authMiddleware, async (req: Request, res: Response) => {
 		return
 	}
 
+	const subjectData = await subjectService.getByName(name, userId)
+	if (subjectData) {
+		res.status(500).json({
+			message: 'You have already created this subject',
+		})
+		return
+	}
+
 	const subject = await subjectService.create({ name, points, userId })
 	if (!subject) {
 		res.status(500).json({ message: 'Cant create subject' })
