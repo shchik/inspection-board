@@ -1,7 +1,9 @@
-<app-loader *ngIf="loader()" />
-
+@if (loader()) {
+<app-loader />
+} @else {
 <ul>
   @for (faculty of facultyItems(); track faculty.id) {
   <app-faculty-card [faculty]="faculty" />
   }
 </ul>
+}

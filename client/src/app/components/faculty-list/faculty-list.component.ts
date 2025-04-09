@@ -1,4 +1,3 @@
-import { NgIf } from '@angular/common';
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { catchError } from 'rxjs';
 import { IFaculty } from '../../model/faculty.type';
@@ -8,7 +7,7 @@ import { LoaderComponent } from '../loader/loader.component';
 
 @Component({
   selector: 'app-faculty-list',
-  imports: [FacultyCardComponent, NgIf, LoaderComponent],
+  imports: [FacultyCardComponent, LoaderComponent],
   templateUrl: './faculty-list.component.html',
   styleUrl: './faculty-list.component.scss',
 })
