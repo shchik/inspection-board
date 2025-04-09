@@ -1,17 +1,9 @@
 .header {
-  width: 100%;
-  background-color: lightblue;
-  padding: 1rem 0.5rem;
+  background-color: steelblue;
+  padding: 0.75rem 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  &__container {
-    img {
-      width: 6rem;
-      border-radius: 50%;
-    }
-  }
 
   nav {
     ul {
@@ -20,10 +12,18 @@
       list-style: none;
 
       li {
-        color: dimgray;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: snow;
         text-decoration: none;
-        margin-left: 1rem;
+        margin-left: 5rem;
         cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          color: darkgreen;
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -31,14 +31,15 @@
   &__buttons {
     button {
       margin-left: 1rem;
-      background-color: aqua;
+      background-color: powderblue;
       padding: 0.5rem 1rem;
       border: 1px solid purple;
       border-radius: 0.25rem;
       cursor: pointer;
+      transition: all 0.4s;
 
       &:hover {
-        box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.7);
+        background-color: lightskyblue;
       }
     }
   }

@@ -1,0 +1,24 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  background-color: pink;
+  position: relative;
+
+  p {
+    position: absolute;
+    bottom: 0.25rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      width: 2rem;
+      margin-left: 1rem;
+      cursor: pointer;
+    }
+  }
+}
