@@ -8,15 +8,33 @@ async function main() {
 			{
 				name: 'ФИТР',
 				fullName: 'Факультет информационных технологий и робототехники',
+				image: 'assets/faculty-images/fitr.jpg',
 			},
-			{ name: 'ЭФ', fullName: 'Энергетический факультет' },
-			{ name: 'СФ', fullName: 'Строительный факультут' },
+			{
+				name: 'ЭФ',
+				fullName: 'Энергетический факультет',
+				image: 'assets/faculty-images/ef.jpeg',
+			},
+			{
+				name: 'СФ',
+				fullName: 'Строительный факультут',
+				image: 'assets/faculty-images/sf.jpg',
+			},
 			{
 				name: 'ФТУГ',
 				fullName: 'Факультет технологий управления и гуманитаризации',
+				image: 'assets/faculty-images/ftug.jpg',
 			},
-			{ name: 'ВТФ', fullName: 'Военно-технический факультет' },
-			{ name: 'АТФ', fullName: 'Автотракторный факультет' },
+			{
+				name: 'ВТФ',
+				fullName: 'Военно-технический факультет',
+				image: 'assets/faculty-images/wtf.jpg',
+			},
+			{
+				name: 'АТФ',
+				fullName: 'Автотракторный факультет',
+				image: 'assets/faculty-images/atf.jpg',
+			},
 		],
 	})
 

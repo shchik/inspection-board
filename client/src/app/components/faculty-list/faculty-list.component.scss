@@ -1,0 +1,7 @@
+ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 90%;
+  gap: 2rem 3rem;
+  list-style: none;
+}

@@ -14,10 +14,32 @@
   }
 
   nav {
-    a {
-      color: dimgray;
-      text-decoration: none;
+    ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+
+      li {
+        color: dimgray;
+        text-decoration: none;
+        margin-left: 1rem;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__buttons {
+    button {
       margin-left: 1rem;
+      background-color: aqua;
+      padding: 0.5rem 1rem;
+      border: 1px solid purple;
+      border-radius: 0.25rem;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.7);
+      }
     }
   }
 }

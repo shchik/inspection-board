@@ -3,8 +3,14 @@
     <img src="{{ logoPath() }}" />
   </div>
   <nav>
-    <a href="/">Главная</a>
-    <a href="/faculty">Факультеты</a>
-    <a href="/profile">Профиль</a>
+    <ul>
+      <li routerLink="/">Главная</li>
+      <li routerLink="/faculty">Факультеты</li>
+      <li routerLink="/profile">Профиль</li>
+    </ul>
   </nav>
+  <div class="header__buttons">
+    <button>Войти</button>
+    <button>Регистрация</button>
+  </div>
 </header>
