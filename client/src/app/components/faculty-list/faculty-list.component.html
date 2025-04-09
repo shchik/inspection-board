@@ -1,3 +1,5 @@
+<app-loader *ngIf="loader()" />
+
 <ul>
   @for (faculty of facultyItems(); track faculty.id) {
   <app-faculty-card [faculty]="faculty" />

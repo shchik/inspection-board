@@ -1,0 +1,27 @@
+div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 50px;
+    animation: spin 1s linear infinite;
+  }
+
+  span {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
